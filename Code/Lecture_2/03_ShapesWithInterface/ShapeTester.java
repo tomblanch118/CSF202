@@ -14,27 +14,38 @@ import java.awt.Graphics;
  */
 public class ShapeTester {
 
+    //Make a List of Drawable things
+    private static List<Drawable> drawables = new ArrayList<Drawable>();
+
     public static void main(String[] args) {
 
-        List<Drawable> drawables = new ArrayList<>();
 
         /*
-         * Would result in a compile error as we cannot 
-         * create an instanct of an abstract class
-         */
-        //Shape anImaginaryShape = new Shape(1,1);
-
+         * Make some shapes that we would like to be drawn. Remember that
+         * the Shape class implements the Drawable interface so all subclasses
+         * had to implement the draw method that is defined in the Drawable
+         * interface.
+        */
         Shape aCircle = new Circle(100,100,100.7);
         Shape aRectangle = new Rectangle(250,19, 25.5, 15.3);
 
+        // Make duck to draw. This class implements the Drawable interface directly
         Duck quackers = new Duck("Sir Quackers");
 
+        // Add all of the objects we made to our list of Drawable things.
         drawables.add(aCircle);
         drawables.add(aRectangle);
         drawables.add(quackers);
-   
+          
+        setupDisplay();
+
     }
 
+    /**
+     * This is where the cool stuff happens. We have a {@link List} containing 
+     * 'things' that conform to the {@link Drawable} interface. This means that,
+     * whatever they are, we know they can be drawn via  draw() method.
+    */
     public static void drawEverything(Graphics graphics) {
         graphics.setColor(Color.green);
 
@@ -44,8 +55,8 @@ public class ShapeTester {
     }
 
     /** Ignore me I'm just here to make a little window we can use 
-     * to draw one :)
-    */
+     * to draw on :)
+     */
     public static void setupDisplay() {
         final int WIDTH = 400;
         final int HEIGHT = 400;
