@@ -5,10 +5,13 @@ import java.util.Objects;
 
 public class Person{
 
-    private String firstName;
-    private String secondName;
-    private int age;
-    private String email;
+    private final String firstName;
+    private final String secondName;
+    private final int age;
+
+    private final String email;
+    private final String phoneNumber;
+    private final String postCode;
 
     private Person(Builder builder){
             
@@ -20,6 +23,10 @@ public class Person{
         firstName = builder.firstName;
         secondName = builder.secondName;
         age = builder.age;
+
+        email = builder.email;
+        phoneNumber = builder.phoneNumber;
+        postCode = builder.postCode;
     }
 
     public static class Builder{
@@ -28,6 +35,8 @@ public class Person{
         private int age;
         
         private String email; 
+        private String phoneNumber;
+        private String postCode;
 
         public Builder(String firstName, String secondName, int age){
             this.firstName = firstName;
@@ -37,6 +46,16 @@ public class Person{
 
         public Builder withEmail(String email){
             this.email = email;
+            return this;
+        }
+
+        public Builder phoneNumber(String phoneNumber){
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        public Builder livesIn(String postCode) {
+            this.postCode = postCode;
             return this;
         }
 
@@ -66,9 +85,26 @@ public class Person{
         return secondName;
     }
 
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @return the phoneNumber
+     */
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
     @Override
     public String toString() {
-        return firstName+" "+secondName+"("+age+")";
+        String str =  firstName+" "+secondName+"("+age+")"+
+                    (phoneNumber!=null?", "+phoneNumber:"")+
+                    (email!=null?", "+email:"");
+
+        return str;
     }
 
 }
