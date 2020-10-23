@@ -1,0 +1,7 @@
+DOB:1941/11/09,SN:Ritchie,FN:Dennis
+DOB:1936/08/17,N:Margaret Heafield Hamilton
+FN:Edsgar,DOB:1930/05/11,SN:Dijkstra
+A:80,N:Barbara Liskov
+FN:John,SN:von Neuman,DOB:1903/12/28
+N:Donald Ervin Knuth,A:82
+SN:Johnson,A:98,FN:Katherine
