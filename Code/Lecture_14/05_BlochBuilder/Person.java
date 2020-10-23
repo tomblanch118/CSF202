@@ -98,11 +98,20 @@ public class Person{
     public String getPhoneNumber() {
         return phoneNumber;
     }
+
+    /**
+     * @return the postCode
+     */
+    public String getPostCode() {
+        return postCode;
+    }
+
     @Override
     public String toString() {
         String str =  firstName+" "+secondName+"("+age+")"+
                     (phoneNumber!=null?", "+phoneNumber:"")+
-                    (email!=null?", "+email:"");
+                    (email!=null?", "+email:"")+
+                    (postCode!=null?", "+postCode:"");
 
         return str;
     }
