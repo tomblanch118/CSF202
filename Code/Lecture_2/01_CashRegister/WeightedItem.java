@@ -22,6 +22,6 @@ public class WeightedItem extends Item {
     @Override
     public String toString() {
         return String.format("%.02f KG of %s (%05d), £%.02f ", weight, 
-                getName(), getUniqueID(), getPrice());
+                getName(), getPrice());
     }
 }
