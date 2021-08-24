@@ -10,7 +10,7 @@ public class GenericsTest{
    /**
     * YOU REALLY DON'T NEED TO KNOW ABOUT THIS STUFF FOR THE MODULE 
     * BUT IT IS COOL AND INTERESTING. PLEASE DON'T READ THIS AND EXPECT
-    * TO UNDERSTAND IT ALL - WE LITERALLY HAVEN'T TAUGHT YOU THIS STUFF!
+    * TO UNDERSTAND IT ALL!
     */  
     public static void main(String[] args) {
       
@@ -31,13 +31,7 @@ public class GenericsTest{
         
         //Inheritance in our generic parameter and using the List interface... mind. blown.
         List<? extends Object> workingAgainWithInterface = new ArrayList<String>();
-  
-
-   }/**
-    * YOU REALLY DON'T NEED TO KNOW ABOUT THIS STUFF FOR THE MODULE 
-    * BUT IT IS COOL AND INTERESTING. PLEASE DON'T READ THIS AND EXPECT
-    * TO UNDERSTAND IT ALL - WE LITERALLY HAVEN'T TAUGHT YOU THIS STUFF!
-    */  
 
 
+    }
 }
